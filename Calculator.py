@@ -1,12 +1,13 @@
 from tkinter import *
 from tkinter import messagebox
 from customtkinter import CTkFrame
+from PIL import ImageTk, Image 
 #import win32gui, win32con
 
 cal=Tk()
 cal.title("Calculator")
 cal.resizable(0,0)
-cal.iconbitmap("Images/Icon.ico")
+cal.iconbitmap("Assets/Icon.ico")
 cal.geometry(""+"+0+345")
 
 main_color="#5e6ca1"
@@ -25,8 +26,8 @@ ent.insert(0, "0")
 ent.bind("<FocusIn>", ent_txt)
 ent.grid(row=1, column=0, columnspan=4, padx=10, pady=30)
 
-options=PhotoImage(file="Images/OptionsLight.png")
-OptionsDark=PhotoImage(file="Images/OptionsDark.png")
+options=ImageTk.PhotoImage(Image.open("Assets/OptionsLight.png"))
+OptionsDark=ImageTk.PhotoImage(Image.open("Assets/OptionsDark.png"))
 
 menu=Menubutton(cal, image=options, bg=main_color, activebackground=sel_color, bd=0)
 menu.place(x=3, y=3)
@@ -37,76 +38,10 @@ menu.config(menu=home_menu)
 Themes=Menu(home_menu, bg=main_color, tearoff=0, activebackground=sel_color, activeforeground="black")
 modes=Menu(home_menu, bg=main_color, tearoff=0, activebackground=sel_color, activeforeground="black")
 
-
-#def
-
-def btn_num(num):
-  current=ent.get()
-  ent.delete(0, END)
-  ent.insert(0, str(current) + str(num))
-
-def delete_all():
-  ent.delete(0, END)
-
-def clear_1():
-  a=ent.get()
-  ent.delete(len(a)-1, END)
-
-def add():
-  first_number=ent.get()
-  global f_num
-  global math
-  math="addition"
-  f_num=float(first_number)
-  ent.delete(0, END)
-
-def sub():
-  first_number=ent.get()
-  global f_num
-  global math
-  math="subtraction"
-  f_num=float(first_number)
-  ent.delete(0, END)
-
-def divide():
-  first_number=ent.get()
-  global f_num
-  global math
-  math="divition"
-  f_num=float(first_number)
-  ent.delete(0, END)
-
-def multiply():
-  first_number=ent.get()
-  global f_num
-  global math
-  math="multiplication"
-  f_num=float(first_number)
-  ent.delete(0, END)
-
-def equal():
-  second_number=float(ent.get())
-  ent.delete(0, END)
-
-  if math == "addition":
-    ent.insert(0, f_num+float(second_number))
-
-  elif math == "subtraction":
-    ent.insert(0, f_num-(float(second_number)))
-
-  elif math == "divition":
-    ent.insert(0, f_num/float(second_number))
-
-  elif math == "multiplication":
-    ent.insert(0, f_num*float(second_number))
-
-# By Pressing Enter this Works
-
-def equal_ent(a):
-  equal()
-
+# Button Function
+from Btn_functions import *
+set_entry(ent)
 ent.bind("<Return>", equal_ent)
-
 
 # Buttons def
 btn_bg="white"
@@ -258,8 +193,8 @@ def enterclose(b):
 def leaveclose(b):
   btn_close["background"]=bgcolor
 
-Backspace=PhotoImage(file="Images/Backspace.png", height=36)
-BackspaceDark=PhotoImage(file="Images/BackspaceDark.png", height=36)
+Backspace=ImageTk.PhotoImage(Image.open("Assets/Backspace.png"), height=36)
+BackspaceDark=ImageTk.PhotoImage(Image.open("Assets/BackspaceDark.png"), height=36)
 
 btn_plus=Button(c_frame, text="+", bg=bgcolor, activebackground=abgop, activeforeground=afgop, font=(opfont, 15), padx=20, pady=2.5, command=add)
 btn_plus.bind("<Enter>", enterplus)
@@ -285,8 +220,8 @@ btn_clear=Button(c_frame, text="                      ", image=Backspace, active
 btn_clear.bind("<Enter>", enterclear)
 btn_clear.bind("<Leave>", leaveclear)
 
-Exit=PhotoImage(file="Images/Exit1.png", height=36)
-ExitDM=PhotoImage(file="Images/ExitDM.png", height=36)
+Exit=ImageTk.PhotoImage(Image.open("Assets/Exit1.png"), height=36)
+ExitDM=ImageTk.PhotoImage(Image.open("Assets/ExitDM.png"), height=36)
 
 btn_close=Button(c_frame, text="                      ", image=Exit, bg=bgcolor, activebackground=abgop, compound=CENTER, command=cal.destroy)
 btn_close.bind("<Enter>", enterclose)
@@ -716,7 +651,7 @@ def gst_calc():
 
 # Bytes Converter
 
-back=PhotoImage(file="Images/Backarrow2.png")
+back=ImageTk.PhotoImage(Image.open("Assets/Backarrow2.png"))
 
 def bycal():
   global byf
