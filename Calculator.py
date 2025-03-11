@@ -15,7 +15,7 @@ sel_color="#7e8cb7"
 cal.config(bg=main_color)
 
 def ent_txt(e):
-    ent.delete(0, END)
+  ent.delete(0, END)
 
 c_frame=Frame(cal, bg=main_color)
 c_frame.pack()
@@ -41,69 +41,69 @@ modes=Menu(home_menu, bg=main_color, tearoff=0, activebackground=sel_color, acti
 #def
 
 def btn_num(num):
-    current=ent.get()
-    ent.delete(0, END)
-    ent.insert(0, str(current) + str(num))
+  current=ent.get()
+  ent.delete(0, END)
+  ent.insert(0, str(current) + str(num))
 
 def delete_all():
-    ent.delete(0, END)
+  ent.delete(0, END)
 
 def clear_1():
-    a=ent.get()
-    ent.delete(len(a)-1, END)
+  a=ent.get()
+  ent.delete(len(a)-1, END)
 
 def add():
-    first_number=ent.get()
-    global f_num
-    global math
-    math="addition"
-    f_num=float(first_number)
-    ent.delete(0, END)
+  first_number=ent.get()
+  global f_num
+  global math
+  math="addition"
+  f_num=float(first_number)
+  ent.delete(0, END)
 
 def sub():
-    first_number=ent.get()
-    global f_num
-    global math
-    math="subtraction"
-    f_num=float(first_number)
-    ent.delete(0, END)
+  first_number=ent.get()
+  global f_num
+  global math
+  math="subtraction"
+  f_num=float(first_number)
+  ent.delete(0, END)
 
 def divide():
-    first_number=ent.get()
-    global f_num
-    global math
-    math="divition"
-    f_num=float(first_number)
-    ent.delete(0, END)
+  first_number=ent.get()
+  global f_num
+  global math
+  math="divition"
+  f_num=float(first_number)
+  ent.delete(0, END)
 
 def multiply():
-    first_number=ent.get()
-    global f_num
-    global math
-    math="multiplication"
-    f_num=float(first_number)
-    ent.delete(0, END)
+  first_number=ent.get()
+  global f_num
+  global math
+  math="multiplication"
+  f_num=float(first_number)
+  ent.delete(0, END)
 
 def equal():
-    second_number=float(ent.get())
-    ent.delete(0, END)
+  second_number=float(ent.get())
+  ent.delete(0, END)
 
-    if math == "addition":
-        ent.insert(0, f_num+float(second_number))
+  if math == "addition":
+    ent.insert(0, f_num+float(second_number))
 
-    elif math == "subtraction":
-        ent.insert(0, f_num-(float(second_number)))
+  elif math == "subtraction":
+    ent.insert(0, f_num-(float(second_number)))
 
-    elif math == "divition":
-        ent.insert(0, f_num/float(second_number))
+  elif math == "divition":
+    ent.insert(0, f_num/float(second_number))
 
-    elif math == "multiplication":
-        ent.insert(0, f_num*float(second_number))
+  elif math == "multiplication":
+    ent.insert(0, f_num*float(second_number))
 
 # By Pressing Enter this Works
 
 def equal_ent(a):
-    equal()
+  equal()
 
 ent.bind("<Return>", equal_ent)
 
@@ -112,64 +112,64 @@ ent.bind("<Return>", equal_ent)
 btn_bg="white"
 
 def enter1(a):
-    btn_1.config(bg=sel_color)
+  btn_1.config(bg=sel_color)
 def leave1(a):
-    btn_1.config(bg=btn_bg)
+  btn_1.config(bg=btn_bg)
 
 def enter2(a):
-    btn_2.config(bg=sel_color)
+  btn_2.config(bg=sel_color)
 def leave2(a):
-    btn_2.config(bg=btn_bg)
+  btn_2.config(bg=btn_bg)
 
 def enter3(a):
-    btn_3.config(bg=sel_color)
+  btn_3.config(bg=sel_color)
 def leave3(a):
-    btn_3.config(bg=btn_bg)
+  btn_3.config(bg=btn_bg)
 
 def enter4(a):
-    btn_4.config(bg=sel_color)
+  btn_4.config(bg=sel_color)
 def leave4(a):
-    btn_4.config(bg=btn_bg)
+  btn_4.config(bg=btn_bg)
 
 def enter5(a):
-    btn_5.config(bg=sel_color)
+  btn_5.config(bg=sel_color)
 def leave5(a):
-    btn_5.config(bg=btn_bg)
+  btn_5.config(bg=btn_bg)
 
 def enter6(a):
-    btn_6.config(bg=sel_color)
+  btn_6.config(bg=sel_color)
 def leave6(a):
-    btn_6.config(bg=btn_bg)
+  btn_6.config(bg=btn_bg)
 
 def enter7(a):
-    btn_7.config(bg=sel_color)
+  btn_7.config(bg=sel_color)
 def leave7(a):
-    btn_7.config(bg=btn_bg)
+  btn_7.config(bg=btn_bg)
 
 def enter8(a):
-    btn_8.config(bg=sel_color)
+  btn_8.config(bg=sel_color)
 def leave8(a):
-    btn_8.config(bg=btn_bg)
+  btn_8.config(bg=btn_bg)
 
 def enter9(a):
-    btn_9.config(bg=sel_color)
+  btn_9.config(bg=sel_color)
 def leave9(a):
-    btn_9.config(bg=btn_bg)
+  btn_9.config(bg=btn_bg)
 
 def enter0(a):
-    btn_0.config(bg=sel_color)
+  btn_0.config(bg=sel_color)
 def leave0(a):
-    btn_0.config(bg=btn_bg)
+  btn_0.config(bg=btn_bg)
 
 def enterpoint(a):
-    btn_point.config(bg=sel_color)
+  btn_point.config(bg=sel_color)
 def leavepoint(a):
-    btn_point.config(bg=btn_bg)
+  btn_point.config(bg=btn_bg)
 
 def enterclear(a):
-    btn_clear.config(bg=sel_color)
+  btn_clear.config(bg=sel_color)
 def leaveclear(a):
-    btn_clear.config(bg=btn_bg)
+  btn_clear.config(bg=btn_bg)
 
 # Buttons
 
@@ -229,34 +229,34 @@ abgop="#004a77"
 afgop="#b6e3ff"
 
 def enterplus(b):
-    btn_plus["background"]=operator_ent
+  btn_plus["background"]=operator_ent
 def leaveplus(b):
-    btn_plus["background"]=bgcolor
+  btn_plus["background"]=bgcolor
 
 def enterminus(b):
-    btn_minus["background"]=operator_ent
+  btn_minus["background"]=operator_ent
 def leaveminus(b):
-    btn_minus["background"]=bgcolor
+  btn_minus["background"]=bgcolor
 
 def entermultiply(b):
-    btn_multiply["background"]=operator_ent
+  btn_multiply["background"]=operator_ent
 def leavemultiply(b):
-    btn_multiply["background"]=bgcolor
+  btn_multiply["background"]=bgcolor
 
 def enterdivide(b):
-    btn_divide["background"]=operator_ent
+  btn_divide["background"]=operator_ent
 def leavedivide(b):
-    btn_divide["background"]=bgcolor
+  btn_divide["background"]=bgcolor
 
 def enternegp(b):
-    btn_negp["background"]=operator_ent
+  btn_negp["background"]=operator_ent
 def leavenegp(b):
-    btn_negp["background"]=bgcolor
+  btn_negp["background"]=bgcolor
 
 def enterclose(b):
-    btn_close["background"]=operator_ent
+  btn_close["background"]=operator_ent
 def leaveclose(b):
-    btn_close["background"]=bgcolor
+  btn_close["background"]=bgcolor
 
 Backspace=PhotoImage(file="Images/Backspace.png", height=36)
 BackspaceDark=PhotoImage(file="Images/BackspaceDark.png", height=36)
@@ -301,14 +301,14 @@ btn_negp.bind("<Leave>", leavenegp)
 funcFont = ("Oswald", 15, "bold")
 
 def enterac(c):
-    btn_Allclear["background"]="orange"
+  btn_Allclear["background"]="orange"
 def leaveac(c):
-    btn_Allclear["background"]="#00FF7F"
+  btn_Allclear["background"]="#00FF7F"
 
 def entereq(c):
-    btn_equ["background"]="grey"
+  btn_equ["background"]="grey"
 def leaveeq(c):
-    btn_equ["background"]="#323336"
+  btn_equ["background"]="#323336"
 
 btn_Allclear=Button(c_frame, text="AC", bg="#00FF7F", activebackground="orange", font=funcFont, cursor="hand2", padx=16, pady=2, command=delete_all)
 btn_Allclear.bind("<Enter>", enterac)
@@ -326,486 +326,486 @@ ColorDark="#2f343d"
 ColorDarkL="black"
 
 def enterd1(f):
-    btn_1["background"]=ColorDark
+  btn_1["background"]=ColorDark
 def leaved1(f):
-    btn_1["background"]=ColorDarkL
+  btn_1["background"]=ColorDarkL
 
 def enterd2(f):
-    btn_2["background"]=ColorDark
+  btn_2["background"]=ColorDark
 def leaved2(f):
-    btn_2["background"]=ColorDarkL
+  btn_2["background"]=ColorDarkL
 
 def enterd3(f):
-    btn_3["background"]=ColorDark
+  btn_3["background"]=ColorDark
 def leaved3(f):
-    btn_3["background"]=ColorDarkL
+  btn_3["background"]=ColorDarkL
 
 def enterd4(f):
-    btn_4["background"]=ColorDark
+  btn_4["background"]=ColorDark
 def leaved4(f):
-    btn_4["background"]=ColorDarkL
+  btn_4["background"]=ColorDarkL
 
 def enterd5(f):
-    btn_5["background"]=ColorDark
+  btn_5["background"]=ColorDark
 def leaved5(f):
-    btn_5["background"]=ColorDarkL
+  btn_5["background"]=ColorDarkL
 
 def enterd6(f):
-    btn_6["background"]=ColorDark
+  btn_6["background"]=ColorDark
 def leaved6(f):
-    btn_6["background"]=ColorDarkL
+  btn_6["background"]=ColorDarkL
 
 def enterd7(f):
-    btn_7["background"]=ColorDark
+  btn_7["background"]=ColorDark
 def leaved7(f):
-    btn_7["background"]=ColorDarkL
+  btn_7["background"]=ColorDarkL
 
 def enterd8(f):
-    btn_8["background"]=ColorDark
+  btn_8["background"]=ColorDark
 def leaved8(f):
-    btn_8["background"]=ColorDarkL
+  btn_8["background"]=ColorDarkL
 
 def enterd9(f):
-    btn_9["background"]=ColorDark
+  btn_9["background"]=ColorDark
 def leaved9(f):
-    btn_9["background"]=ColorDarkL
+  btn_9["background"]=ColorDarkL
 
 def enterd0(f):
-    btn_0["background"]=ColorDark
+  btn_0["background"]=ColorDark
 def leaved0(f):
-    btn_0["background"]=ColorDarkL
+  btn_0["background"]=ColorDarkL
 
 def enterdpoint(f):
-    btn_point["background"]=ColorDark
+  btn_point["background"]=ColorDark
 def leavedpoint(f):
-    btn_point["background"]=ColorDarkL
+  btn_point["background"]=ColorDarkL
 
 def enterdclear(f):
-    btn_clear["background"]=ColorDark
+  btn_clear["background"]=ColorDark
 def leavedclear(f):
-    btn_clear["background"]=ColorDarkL
+  btn_clear["background"]=ColorDarkL
 
 def enterdeq(f):
-    btn_equ["background"]="#ffeec0"
+  btn_equ["background"]="#ffeec0"
 def leavedeq(f):
-    btn_equ["background"]="white"
+  btn_equ["background"]="white"
 
 ColorDarkop="#40667d"
 ColorDarkLop="#004a77"
 
 def enterdplus(f):
-    btn_plus["background"]=ColorDarkop
+  btn_plus["background"]=ColorDarkop
 def leavedplus(f):
-    btn_plus["background"]=ColorDarkLop
+  btn_plus["background"]=ColorDarkLop
 
 def enterdminus(f):
-    btn_minus["background"]=ColorDarkop
+  btn_minus["background"]=ColorDarkop
 def leavedminus(f):
-    btn_minus["background"]=ColorDarkLop
+  btn_minus["background"]=ColorDarkLop
 
 def enterdmultiply(f):
-    btn_multiply["background"]=ColorDarkop
+  btn_multiply["background"]=ColorDarkop
 def leavedmultiply(f):
-    btn_multiply["background"]=ColorDarkLop
+  btn_multiply["background"]=ColorDarkLop
 
 def enterddivide(f):
-    btn_divide["background"]=ColorDarkop
+  btn_divide["background"]=ColorDarkop
 def leaveddivide(f):
-    btn_divide["background"]=ColorDarkLop
+  btn_divide["background"]=ColorDarkLop
 
 def enterdclose(f):
-    btn_close["background"]=ColorDarkop
+  btn_close["background"]=ColorDarkop
 def leavedclose(f):
-    btn_close["background"]=ColorDarkLop
+  btn_close["background"]=ColorDarkLop
 
 def enterdnegp(f):
-    btn_negp["background"]=ColorDarkop
+  btn_negp["background"]=ColorDarkop
 def leavednegp(f):
-    btn_negp["background"]=ColorDarkLop
+  btn_negp["background"]=ColorDarkLop
 
 
 # Dark Mode and Light Mode
 
 def DarkMode():
-    btnabg="#2f343d"
-    btnafg="white"
+  btnabg="#2f343d"
+  btnafg="white"
 
-    abg="grey"
-    afg="black"
+  abg="grey"
+  afg="black"
 
-    menu.config(border=0, activebackground="#2f343d", activeforeground="white")
-    Themes.config(bg="#2f343d", fg="white", activebackground=abg, activeforeground=afg)
-    home_menu.config(bg="#2f343d", fg="white", activebackground=abg, activeforeground=afg)
-    modes.config(bg="#2f343d", fg="white", activebackground=abg, activeforeground=afg)
+  menu.config(border=0, activebackground="#2f343d", activeforeground="white")
+  Themes.config(bg="#2f343d", fg="white", activebackground=abg, activeforeground=afg)
+  home_menu.config(bg="#2f343d", fg="white", activebackground=abg, activeforeground=afg)
+  modes.config(bg="#2f343d", fg="white", activebackground=abg, activeforeground=afg)
 
-    forg="#b6e3ff"
-    bacg="black"
-    operatorbg="#004a77"
-    operatorfg="#b6e3ff"
+  forg="#b6e3ff"
+  bacg="black"
+  operatorbg="#004a77"
+  operatorfg="#b6e3ff"
 
-    cal.config(bg="#37393c")
+  cal.config(bg="#37393c")
 
-    btn_1.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_1.bind("<Enter>", enterd1)
-    btn_1.bind("<Leave>", leaved1)
+  btn_1.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_1.bind("<Enter>", enterd1)
+  btn_1.bind("<Leave>", leaved1)
 
-    btn_2.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_2.bind("<Enter>", enterd2)
-    btn_2.bind("<Leave>", leaved2)
+  btn_2.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_2.bind("<Enter>", enterd2)
+  btn_2.bind("<Leave>", leaved2)
 
-    btn_3.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_3.bind("<Enter>", enterd3)
-    btn_3.bind("<Leave>", leaved3)
+  btn_3.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_3.bind("<Enter>", enterd3)
+  btn_3.bind("<Leave>", leaved3)
 
-    btn_4.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_4.bind("<Enter>", enterd4)
-    btn_4.bind("<Leave>", leaved4)
-    
-    btn_5.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_5.bind("<Enter>", enterd5)
-    btn_5.bind("<Leave>", leaved5)
-    
-    btn_6.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_6.bind("<Enter>", enterd6)
-    btn_6.bind("<Leave>", leaved6)
-    
-    btn_7.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_7.bind("<Enter>", enterd7)
-    btn_7.bind("<Leave>", leaved7)
-    
-    btn_8.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_8.bind("<Enter>", enterd8)
-    btn_8.bind("<Leave>", leaved8)
-    
-    btn_9.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_9.bind("<Enter>", enterd9)
-    btn_9.bind("<Leave>", leaved9)
-    
-    btn_0.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_0.bind("<Enter>", enterd0)
-    btn_0.bind("<Leave>", leaved0)
+  btn_4.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_4.bind("<Enter>", enterd4)
+  btn_4.bind("<Leave>", leaved4)
+  
+  btn_5.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_5.bind("<Enter>", enterd5)
+  btn_5.bind("<Leave>", leaved5)
+  
+  btn_6.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_6.bind("<Enter>", enterd6)
+  btn_6.bind("<Leave>", leaved6)
+  
+  btn_7.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_7.bind("<Enter>", enterd7)
+  btn_7.bind("<Leave>", leaved7)
+  
+  btn_8.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_8.bind("<Enter>", enterd8)
+  btn_8.bind("<Leave>", leaved8)
+  
+  btn_9.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_9.bind("<Enter>", enterd9)
+  btn_9.bind("<Leave>", leaved9)
+  
+  btn_0.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_0.bind("<Enter>", enterd0)
+  btn_0.bind("<Leave>", leaved0)
 
-    btn_point.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_point.bind("<Enter>", enterdpoint)
-    btn_point.bind("<Leave>", leavedpoint)
+  btn_point.config(fg=forg, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_point.bind("<Enter>", enterdpoint)
+  btn_point.bind("<Leave>", leavedpoint)
 
-    btn_clear.config(image=BackspaceDark, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
-    btn_clear.bind("<Enter>", enterdclear)
-    btn_clear.bind("<Leave>", leavedclear)
+  btn_clear.config(image=BackspaceDark, bg=bacg, activebackground=btnabg, activeforeground=btnafg)
+  btn_clear.bind("<Enter>", enterdclear)
+  btn_clear.bind("<Leave>", leavedclear)
 
-    btn_equ.config(bg="white", fg="black", activebackground="#ffeec0", activeforeground="black")
-    btn_equ.bind("<Enter>", enterdeq)
-    btn_equ.bind("<Leave>", leavedeq)
+  btn_equ.config(bg="white", fg="black", activebackground="#ffeec0", activeforeground="black")
+  btn_equ.bind("<Enter>", enterdeq)
+  btn_equ.bind("<Leave>", leavedeq)
 
-    abgdop="#004a77"
-    afgdop="white"
+  abgdop="#004a77"
+  afgdop="white"
 
-    btn_plus.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
-    btn_plus.bind("<Enter>", enterdplus)
-    btn_plus.bind("<Leave>", leavedplus)
+  btn_plus.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
+  btn_plus.bind("<Enter>", enterdplus)
+  btn_plus.bind("<Leave>", leavedplus)
 
-    btn_minus.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
-    btn_minus.bind("<Enter>", enterdminus)
-    btn_minus.bind("<Leave>", leavedminus)
+  btn_minus.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
+  btn_minus.bind("<Enter>", enterdminus)
+  btn_minus.bind("<Leave>", leavedminus)
 
-    btn_divide.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
-    btn_divide.bind("<Enter>", enterddivide)
-    btn_divide.bind("<Leave>", leaveddivide)
+  btn_divide.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
+  btn_divide.bind("<Enter>", enterddivide)
+  btn_divide.bind("<Leave>", leaveddivide)
 
-    btn_multiply.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
-    btn_multiply.bind("<Enter>", enterdmultiply)
-    btn_multiply.bind("<Leave>", leavedmultiply)
+  btn_multiply.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
+  btn_multiply.bind("<Enter>", enterdmultiply)
+  btn_multiply.bind("<Leave>", leavedmultiply)
 
-    btn_close.config(image=ExitDM, bg=operatorbg, activebackground=abgdop)
-    btn_close.bind("<Enter>", enterdclose)
-    btn_close.bind("<Leave>", leavedclose)
+  btn_close.config(image=ExitDM, bg=operatorbg, activebackground=abgdop)
+  btn_close.bind("<Enter>", enterdclose)
+  btn_close.bind("<Leave>", leavedclose)
 
-    btn_negp.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
-    btn_negp.bind("<Enter>", enterdnegp)
-    btn_negp.bind("<Leave>", leavednegp)
+  btn_negp.config(bg=operatorbg, fg=operatorfg, activebackground=abgdop, activeforeground=afgdop)
+  btn_negp.bind("<Enter>", enterdnegp)
+  btn_negp.bind("<Leave>", leavednegp)
 
 
 def LightMode():
-    bglm="white"
-    fglm="black"
-    btnafgD="#b6e3ff"
-    btnabgD="#2f343d"
+  bglm="white"
+  fglm="black"
+  btnafgD="#b6e3ff"
+  btnabgD="#2f343d"
 
-    menu.config(image=options, bg=main_color, activebackground=sel_color, border=0)
-    cal.config(bg=main_color)
-    ent.config(bg=main_color, fg="black", insertbackground="black")
+  menu.config(image=options, bg=main_color, activebackground=sel_color, border=0)
+  cal.config(bg=main_color)
+  ent.config(bg=main_color, fg="black", insertbackground="black")
 
-    home_menu.config(bg=main_color, fg="black", activebackground=sel_color, activeforeground="black")
-    Themes.config(bg=main_color, fg="black", activebackground=sel_color, activeforeground="black")
-    modes.config(bg=main_color, fg="black", activebackground=sel_color, activeforeground="black")
+  home_menu.config(bg=main_color, fg="black", activebackground=sel_color, activeforeground="black")
+  Themes.config(bg=main_color, fg="black", activebackground=sel_color, activeforeground="black")
+  modes.config(bg=main_color, fg="black", activebackground=sel_color, activeforeground="black")
 
-    btn_1.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_1.bind("<Enter>", enter1)
-    btn_1.bind("<Leave>", leave1)
+  btn_1.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_1.bind("<Enter>", enter1)
+  btn_1.bind("<Leave>", leave1)
 
-    btn_2.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_2.bind("<Enter>", enter2)
-    btn_2.bind("<Leave>", leave2)
+  btn_2.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_2.bind("<Enter>", enter2)
+  btn_2.bind("<Leave>", leave2)
 
-    btn_3.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_3.bind("<Enter>", enter3)
-    btn_3.bind("<Leave>", leave3)
-    
-    btn_4.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_4.bind("<Enter>", enter4)
-    btn_4.bind("<Leave>", leave4)
-    
-    btn_5.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_5.bind("<Enter>", enter5)
-    btn_5.bind("<Leave>", leave5)
-    
-    btn_6.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_6.bind("<Enter>", enter6)
-    btn_6.bind("<Leave>", leave6)
-    
-    btn_7.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_7.bind("<Enter>", enter7)
-    btn_7.bind("<Leave>", leave7)
-    
-    btn_8.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_8.bind("<Enter>", enter8)
-    btn_8.bind("<Leave>", leave8)
-    
-    btn_9.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_9.bind("<Enter>", enter9)
-    btn_9.bind("<Leave>", leave9)
-    
-    btn_0.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_0.bind("<Enter>", enter0)
-    btn_0.bind("<Leave>", leave0)
+  btn_3.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_3.bind("<Enter>", enter3)
+  btn_3.bind("<Leave>", leave3)
+  
+  btn_4.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_4.bind("<Enter>", enter4)
+  btn_4.bind("<Leave>", leave4)
+  
+  btn_5.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_5.bind("<Enter>", enter5)
+  btn_5.bind("<Leave>", leave5)
+  
+  btn_6.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_6.bind("<Enter>", enter6)
+  btn_6.bind("<Leave>", leave6)
+  
+  btn_7.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_7.bind("<Enter>", enter7)
+  btn_7.bind("<Leave>", leave7)
+  
+  btn_8.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_8.bind("<Enter>", enter8)
+  btn_8.bind("<Leave>", leave8)
+  
+  btn_9.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_9.bind("<Enter>", enter9)
+  btn_9.bind("<Leave>", leave9)
+  
+  btn_0.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_0.bind("<Enter>", enter0)
+  btn_0.bind("<Leave>", leave0)
 
-    btn_point.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
-    btn_point.bind("<Enter>", enterpoint)
-    btn_point.bind("<Leave>", leavepoint)
+  btn_point.config(bg=bglm, fg=fglm, activebackground=btnabgD, activeforeground=btnafgD)
+  btn_point.bind("<Enter>", enterpoint)
+  btn_point.bind("<Leave>", leavepoint)
 
-    btn_clear.config(image=Backspace, bg=bglm, activebackground=btnabgD)
-    btn_clear.bind("<Enter>", enterclear)
-    btn_clear.bind("<Leave>", leaveclear)
+  btn_clear.config(image=Backspace, bg=bglm, activebackground=btnabgD)
+  btn_clear.bind("<Enter>", enterclear)
+  btn_clear.bind("<Leave>", leaveclear)
 
-    btn_plus.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
-    btn_plus.bind("<Enter>", enterplus)
-    btn_plus.bind("<Leave>", leaveplus)
+  btn_plus.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
+  btn_plus.bind("<Enter>", enterplus)
+  btn_plus.bind("<Leave>", leaveplus)
 
-    btn_minus.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
-    btn_minus.bind("<Enter>", enterminus)
-    btn_minus.bind("<Leave>", leaveminus)
+  btn_minus.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
+  btn_minus.bind("<Enter>", enterminus)
+  btn_minus.bind("<Leave>", leaveminus)
 
-    btn_divide.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
-    btn_divide.bind("<Enter>", enterdivide)
-    btn_divide.bind("<Leave>", leavedivide)
+  btn_divide.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
+  btn_divide.bind("<Enter>", enterdivide)
+  btn_divide.bind("<Leave>", leavedivide)
 
-    btn_multiply.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
-    btn_multiply.bind("<Enter>", entermultiply)
-    btn_multiply.bind("<Leave>", leavemultiply)
+  btn_multiply.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
+  btn_multiply.bind("<Enter>", entermultiply)
+  btn_multiply.bind("<Leave>", leavemultiply)
 
-    btn_close.config(image=Exit, bg=bgcolor, fg=fglm, activebackground=abgop)
-    btn_close.bind("<Enter>", enterclose)
-    btn_close.bind("<Leave>", leaveclose)
+  btn_close.config(image=Exit, bg=bgcolor, fg=fglm, activebackground=abgop)
+  btn_close.bind("<Enter>", enterclose)
+  btn_close.bind("<Leave>", leaveclose)
 
-    btn_negp.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
-    btn_negp.bind("<Enter>", enternegp)
-    btn_negp.bind("<Leave>", leavenegp)
+  btn_negp.config(bg=bgcolor, fg=fglm, activebackground=abgop, activeforeground=afgop)
+  btn_negp.bind("<Enter>", enternegp)
+  btn_negp.bind("<Leave>", leavenegp)
 
-    btn_equ.config(bg="#323336", fg=bglm)
-    btn_equ.bind("<Enter>", entereq)
-    btn_equ.bind("<Leave>", leaveeq)
+  btn_equ.config(bg="#323336", fg=bglm)
+  btn_equ.bind("<Enter>", entereq)
+  btn_equ.bind("<Leave>", leaveeq)
 
 # GST Calculator
 
 def gst_calc():
-    global gf
-    
-    # btn disable
-    ent.config(state=DISABLED)
-    btn_1.config(state=DISABLED)
-    btn_2.config(state=DISABLED)
-    btn_3.config(state=DISABLED)
-    btn_4.config(state=DISABLED)
-    btn_5.config(state=DISABLED)
-    btn_6.config(state=DISABLED)
-    btn_7.config(state=DISABLED)
-    btn_8.config(state=DISABLED)
-    btn_9.config(state=DISABLED)
-    btn_0.config(state=DISABLED)
-    btn_point.config(state=DISABLED)
-    btn_equ.config(state=DISABLED)
-    btn_plus.config(state=DISABLED)
-    btn_minus.config(state=DISABLED)
-    btn_divide.config(state=DISABLED)
-    btn_multiply.config(state=DISABLED)
-    btn_negp.config(state=DISABLED)
-    btn_Allclear.config(state=DISABLED)
-    btn_clear.config(state=DISABLED)
-    menu.config(state=DISABLED)
+  global gf
+  
+  # btn disable
+  ent.config(state=DISABLED)
+  btn_1.config(state=DISABLED)
+  btn_2.config(state=DISABLED)
+  btn_3.config(state=DISABLED)
+  btn_4.config(state=DISABLED)
+  btn_5.config(state=DISABLED)
+  btn_6.config(state=DISABLED)
+  btn_7.config(state=DISABLED)
+  btn_8.config(state=DISABLED)
+  btn_9.config(state=DISABLED)
+  btn_0.config(state=DISABLED)
+  btn_point.config(state=DISABLED)
+  btn_equ.config(state=DISABLED)
+  btn_plus.config(state=DISABLED)
+  btn_minus.config(state=DISABLED)
+  btn_divide.config(state=DISABLED)
+  btn_multiply.config(state=DISABLED)
+  btn_negp.config(state=DISABLED)
+  btn_Allclear.config(state=DISABLED)
+  btn_clear.config(state=DISABLED)
+  menu.config(state=DISABLED)
 
-    def gst_d():
-        gst_b_btn.destroy()
-        gf.destroy()
+  def gst_d():
+    gst_b_btn.destroy()
+    gf.destroy()
 
-        # btn normal
-        ent.config(state=NORMAL)
-        btn_1.config(state=NORMAL)
-        btn_2.config(state=NORMAL)
-        btn_3.config(state=NORMAL)
-        btn_4.config(state=NORMAL)
-        btn_5.config(state=NORMAL)
-        btn_6.config(state=NORMAL)
-        btn_7.config(state=NORMAL)
-        btn_8.config(state=NORMAL)
-        btn_9.config(state=NORMAL)
-        btn_0.config(state=NORMAL)
-        btn_point.config(state=NORMAL)
-        btn_equ.config(state=NORMAL)
-        btn_plus.config(state=NORMAL)
-        btn_minus.config(state=NORMAL)
-        btn_divide.config(state=NORMAL)
-        btn_multiply.config(state=NORMAL)
-        btn_negp.config(state=NORMAL)
-        btn_Allclear.config(state=NORMAL)
-        btn_clear.config(state=NORMAL)
-        menu.config(state=NORMAL)
+    # btn normal
+    ent.config(state=NORMAL)
+    btn_1.config(state=NORMAL)
+    btn_2.config(state=NORMAL)
+    btn_3.config(state=NORMAL)
+    btn_4.config(state=NORMAL)
+    btn_5.config(state=NORMAL)
+    btn_6.config(state=NORMAL)
+    btn_7.config(state=NORMAL)
+    btn_8.config(state=NORMAL)
+    btn_9.config(state=NORMAL)
+    btn_0.config(state=NORMAL)
+    btn_point.config(state=NORMAL)
+    btn_equ.config(state=NORMAL)
+    btn_plus.config(state=NORMAL)
+    btn_minus.config(state=NORMAL)
+    btn_divide.config(state=NORMAL)
+    btn_multiply.config(state=NORMAL)
+    btn_negp.config(state=NORMAL)
+    btn_Allclear.config(state=NORMAL)
+    btn_clear.config(state=NORMAL)
+    menu.config(state=NORMAL)
 
-    def b_en(a):
-        gst_b_btn.config(bg=sel_color)
-    def b_le(a):
-        gst_b_btn.config(bg=main_color)
+  def b_en(a):
+    gst_b_btn.config(bg=sel_color)
+  def b_le(a):
+    gst_b_btn.config(bg=main_color)
 
-    gst_b_btn=Button(cal, image=back, width=20, height=20, bg=main_color, bd=0, command=gst_d)
-    gst_b_btn.bind("<Enter>", b_en)
-    gst_b_btn.bind("<Leave>", b_le)
-    gst_b_btn.place(x=3, y=3)
+  gst_b_btn=Button(cal, image=back, width=20, height=20, bg=main_color, bd=0, command=gst_d)
+  gst_b_btn.bind("<Enter>", b_en)
+  gst_b_btn.bind("<Leave>", b_le)
+  gst_b_btn.place(x=3, y=3)
 
-    gf=CTkFrame(c_frame, fg_color="#ffccd9", bg_color="transparent", border_width=2, border_color="black", corner_radius=20)
-    gf.place(x=4, y=28)
+  gf=CTkFrame(c_frame, fg_color="#ffccd9", bg_color="transparent", border_width=2, border_color="black", corner_radius=20)
+  gf.place(x=4, y=28)
 
-    orilbl=Label(gf, text="Enter the Original Price", font=("Arial", 14, "bold"), bg="#ffccd9")
-    orilbl.pack(pady=(10, 5))
+  orilbl=Label(gf, text="Enter the Original Price", font=("Arial", 14, "bold"), bg="#ffccd9")
+  orilbl.pack(pady=(10, 5))
 
-    def gst():
-        try:
-            gstamt=float(netp.get())-float(orip.get())
-            gstp=str(int(gstamt*100/float(orip.get())))
-            glbl.config(text=(gstp + "%" + " GST"))
-        except ValueError:
-            messagebox.showinfo("Information", "Type Something")
+  def gst():
+    try:
+      gstamt=float(netp.get())-float(orip.get())
+      gstp=str(int(gstamt*100/float(orip.get())))
+      glbl.config(text=(gstp + "%" + " GST"))
+    except ValueError:
+      messagebox.showinfo("Information", "Type Something")
 
-    def gst_ent(e):
-        gst()
+  def gst_ent(e):
+    gst()
 
-    orip=Entry(gf, width=15, bg=main_color, font=("Arial", 25), bd=3)
-    orip.bind("<Return>", gst_ent)
-    orip.pack(padx=3)
+  orip=Entry(gf, width=15, bg=main_color, font=("Arial", 25), bd=3)
+  orip.bind("<Return>", gst_ent)
+  orip.pack(padx=3)
 
-    netlbl=Label(gf, text="Enter the Net Price", font=("Arial", 14, "bold"), bg="#ffccd9")
-    netlbl.pack(pady=(8, 5))
+  netlbl=Label(gf, text="Enter the Net Price", font=("Arial", 14, "bold"), bg="#ffccd9")
+  netlbl.pack(pady=(8, 5))
 
-    netp=Entry(gf, width=15, bg=main_color, font=("Arial", 25), bd=3)
-    netp.bind("<Return>", gst_ent)
-    netp.pack(padx=3)
+  netp=Entry(gf, width=15, bg=main_color, font=("Arial", 25), bd=3)
+  netp.bind("<Return>", gst_ent)
+  netp.pack(padx=3)
 
-    gbtn=Button(gf, text="Click for Answer", font=("Arial", 13, "bold"), bg="#eaeff9", command=gst)
-    gbtn.pack(pady=(7, 10))
+  gbtn=Button(gf, text="Click for Answer", font=("Arial", 13, "bold"), bg="#eaeff9", command=gst)
+  gbtn.pack(pady=(7, 10))
 
-    glbl=Label(gf, text="", font=("Arial", 13, "bold"), bg="#ffccd9")
-    glbl.pack(pady=(0, 5))
+  glbl=Label(gf, text="", font=("Arial", 13, "bold"), bg="#ffccd9")
+  glbl.pack(pady=(0, 5))
 
 # Bytes Converter
 
 back=PhotoImage(file="Images/Backarrow2.png")
 
 def bycal():
-    global byf
+  global byf
 
-    # btn disable
-    ent.config(state=DISABLED)
-    btn_1.config(state=DISABLED)
-    btn_2.config(state=DISABLED)
-    btn_3.config(state=DISABLED)
-    btn_4.config(state=DISABLED)
-    btn_5.config(state=DISABLED)
-    btn_6.config(state=DISABLED)
-    btn_7.config(state=DISABLED)
-    btn_8.config(state=DISABLED)
-    btn_9.config(state=DISABLED)
-    btn_0.config(state=DISABLED)
-    btn_point.config(state=DISABLED)
-    btn_equ.config(state=DISABLED)
-    btn_plus.config(state=DISABLED)
-    btn_minus.config(state=DISABLED)
-    btn_divide.config(state=DISABLED)
-    btn_multiply.config(state=DISABLED)
-    btn_negp.config(state=DISABLED)
-    btn_Allclear.config(state=DISABLED)
-    btn_clear.config(state=DISABLED)
-    menu.config(state=DISABLED)
+  # btn disable
+  ent.config(state=DISABLED)
+  btn_1.config(state=DISABLED)
+  btn_2.config(state=DISABLED)
+  btn_3.config(state=DISABLED)
+  btn_4.config(state=DISABLED)
+  btn_5.config(state=DISABLED)
+  btn_6.config(state=DISABLED)
+  btn_7.config(state=DISABLED)
+  btn_8.config(state=DISABLED)
+  btn_9.config(state=DISABLED)
+  btn_0.config(state=DISABLED)
+  btn_point.config(state=DISABLED)
+  btn_equ.config(state=DISABLED)
+  btn_plus.config(state=DISABLED)
+  btn_minus.config(state=DISABLED)
+  btn_divide.config(state=DISABLED)
+  btn_multiply.config(state=DISABLED)
+  btn_negp.config(state=DISABLED)
+  btn_Allclear.config(state=DISABLED)
+  btn_clear.config(state=DISABLED)
+  menu.config(state=DISABLED)
 
-    byf=CTkFrame(c_frame, fg_color="#ffccd9", border_width=2, border_color="black", corner_radius=20)
-    byf.place(x=5, y=28)
+  byf=CTkFrame(c_frame, fg_color="#ffccd9", border_width=2, border_color="black", corner_radius=20)
+  byf.place(x=5, y=28)
 
-    def byd():
-        by_b_btn.destroy()
-        byf.destroy()
+  def byd():
+    by_b_btn.destroy()
+    byf.destroy()
 
-        # btn normal
-        ent.config(state=NORMAL)
-        btn_1.config(state=NORMAL)
-        btn_2.config(state=NORMAL)
-        btn_3.config(state=NORMAL)
-        btn_4.config(state=NORMAL)
-        btn_5.config(state=NORMAL)
-        btn_6.config(state=NORMAL)
-        btn_7.config(state=NORMAL)
-        btn_8.config(state=NORMAL)
-        btn_9.config(state=NORMAL)
-        btn_0.config(state=NORMAL)
-        btn_point.config(state=NORMAL)
-        btn_equ.config(state=NORMAL)
-        btn_plus.config(state=NORMAL)
-        btn_minus.config(state=NORMAL)
-        btn_divide.config(state=NORMAL)
-        btn_multiply.config(state=NORMAL)
-        btn_negp.config(state=NORMAL)
-        btn_Allclear.config(state=NORMAL)
-        btn_clear.config(state=NORMAL)
-        menu.config(state=NORMAL)
+    # btn normal
+    ent.config(state=NORMAL)
+    btn_1.config(state=NORMAL)
+    btn_2.config(state=NORMAL)
+    btn_3.config(state=NORMAL)
+    btn_4.config(state=NORMAL)
+    btn_5.config(state=NORMAL)
+    btn_6.config(state=NORMAL)
+    btn_7.config(state=NORMAL)
+    btn_8.config(state=NORMAL)
+    btn_9.config(state=NORMAL)
+    btn_0.config(state=NORMAL)
+    btn_point.config(state=NORMAL)
+    btn_equ.config(state=NORMAL)
+    btn_plus.config(state=NORMAL)
+    btn_minus.config(state=NORMAL)
+    btn_divide.config(state=NORMAL)
+    btn_multiply.config(state=NORMAL)
+    btn_negp.config(state=NORMAL)
+    btn_Allclear.config(state=NORMAL)
+    btn_clear.config(state=NORMAL)
+    menu.config(state=NORMAL)
 
-    def b_en(a):
-        by_b_btn.config(bg=sel_color)
-    def b_le(a):
-        by_b_btn.config(bg=main_color)
+  def b_en(a):
+    by_b_btn.config(bg=sel_color)
+  def b_le(a):
+    by_b_btn.config(bg=main_color)
 
-    by_b_btn=Button(cal, image=back, width=20, height=20, bg=main_color, bd=0, command=byd)
-    by_b_btn.bind("<Enter>", b_en)
-    by_b_btn.bind("<Leave>", b_le)
-    by_b_btn.place(x=3, y=3)
+  by_b_btn=Button(cal, image=back, width=20, height=20, bg=main_color, bd=0, command=byd)
+  by_b_btn.bind("<Enter>", b_en)
+  by_b_btn.bind("<Leave>", b_le)
+  by_b_btn.place(x=3, y=3)
 
-    gblbl=Label(byf, text="Enter the Giga Byte", font=("Arial", 16, "bold"), bg="#ffccd9")
-    gblbl.pack(pady=(10, 5))
+  gblbl=Label(byf, text="Enter the Giga Byte", font=("Arial", 16, "bold"), bg="#ffccd9")
+  gblbl.pack(pady=(10, 5))
 
-    def gtb(): 
-        try:
-            b=float(gb.get())*(2**10)**3
-            glbl.config(text=(float(gb.get()), "is", b, "Byte"))
-        except ValueError:
-            messagebox.showinfo("Information", "Type Something")
+  def gtb(): 
+    try:
+      b=float(gb.get())*(2**10)**3
+      glbl.config(text=(float(gb.get()), "is", b, "Byte"))
+    except ValueError:
+      messagebox.showinfo("Information", "Type Something")
 
-    def gb_ent(e):
-        gtb()
+  def gb_ent(e):
+    gtb()
 
-    gb=Entry(byf, width=15, bg=main_color, font=("Arial", 25), bd=2)
-    gb.bind("<Return>", gb_ent)
-    gb.pack(padx=3)
+  gb=Entry(byf, width=15, bg=main_color, font=("Arial", 25), bd=2)
+  gb.bind("<Return>", gb_ent)
+  gb.pack(padx=3)
 
-    gbtn=Button(byf, text="Click for Answer", font=("Arial", 13, "bold"), bg="#eaeff9", command=gtb)
-    gbtn.pack(pady=10)
+  gbtn=Button(byf, text="Click for Answer", font=("Arial", 13, "bold"), bg="#eaeff9", command=gtb)
+  gbtn.pack(pady=10)
 
-    glbl=Label(byf, text="", bg="#ffccd9", font=("Arial", 13, "bold"))
-    glbl.pack(pady=(0, 5))
+  glbl=Label(byf, text="", bg="#ffccd9", font=("Arial", 13, "bold"))
+  glbl.pack(pady=(0, 5))
 
 # Menu
 
